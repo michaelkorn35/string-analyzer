@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "string-analyzer"
+version = "0.1.0"
+description = "Prototype executable string analyzer (URLs/domains/IPs/paths/errors/encoded)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Michael" }]
+dependencies = []
+
+[project.scripts]
+string-analyzer = "string_analyzer.__main__:main"
+
+[tool.setuptools]
+package-dir = {"" = "."}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["string_analyzer*"]
