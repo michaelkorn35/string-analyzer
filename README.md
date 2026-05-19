@@ -1,4 +1,4 @@
-# String Analyzer (Prototype)
+# String Analyzer
 
 When staticaly analyzing a file, the biggest headache is reviewin the strings. Most executables contain at least a couple of thousands of strings and it can go up to millions as the size goes up. Around 85% of the strings if not more are short blobs that have no meaning or strings that have no meaning to the analysis process. For that reason I created the String Analyzer, to automate the process of gathering the important details.
 
@@ -28,10 +28,3 @@ Top-level keys:
 - `settings`: extraction/detection settings used
 - `counts`: total extracted + unique strings
 - `categories`: per-category `count` and `matches`
-
-## Extending
-
-Easy next steps:
-- Add scoring/ranking (`top_n`) without changing detectors.
-- Add PE-aware extraction (sections, resources).
-- Add IPv6 parsing, better domain parsing, and IOC enrichment.
